@@ -60,7 +60,9 @@ import cec
 adapters = cec.list_adapters() # may be called before init()
 
 cec.init() # use default adapter
-cec.init(adapter) # use a specific adapter
+cec.init('MyDev') # set device name (Max 13 characters)
+cec.init('MyDev', adapter) # set device name and use a specific adapter
+cec.init('', adapter) # use a specific adapter without changing device name
 
 cec.close()  # not implemented yet
 
